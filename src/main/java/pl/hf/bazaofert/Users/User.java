@@ -10,12 +10,9 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
     @Column(nullable = false, unique = true)
     private String username;
-
     private String password;
-
-
 }
