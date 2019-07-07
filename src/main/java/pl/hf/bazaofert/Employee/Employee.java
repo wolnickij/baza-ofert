@@ -1,9 +1,17 @@
 package pl.hf.bazaofert.Employee;
 
 import lombok.Data;
+import pl.hf.bazaofert.Offer.Offer;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Data
+@Entity
 public class Employee {
+    @Id
+    @GeneratedValue
+    private int Id;
     private Gender gender;
     private String firstName;
     private String lastName;
@@ -12,4 +20,6 @@ public class Employee {
     private String cellPhoneNumber;
     private  JobPosition jobPosition;
     private  String employeeCode;
+    @OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="personResponsible")
+    private List<Offer> offers;
 }
