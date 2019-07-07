@@ -14,4 +14,5 @@ public class OfferPosition {
     @GeneratedValue
     Long id;
     String offerPosition;
+
 }

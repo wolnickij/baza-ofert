@@ -3,12 +3,10 @@ package pl.hf.bazaofert.Product;
 import lombok.Data;
 
 @Data
-public class PipeHFI extends Product implements Measurable {
-
-    private ProductType productType;
+public abstract class ProductPipe extends Product implements Weightable {
     private float diameter;
     private float wallThickness;
-    private String grade;
+    private SteelGrade grade;
     private float length;
     private int lengthToleranceMinus;
     private int lengthTolerancePlus;
@@ -21,3 +19,5 @@ public class PipeHFI extends Product implements Measurable {
         return weight;
     }
 }
+
+

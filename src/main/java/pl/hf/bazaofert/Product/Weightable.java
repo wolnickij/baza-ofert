@@ -1,5 +1,5 @@
 package pl.hf.bazaofert.Product;
 
-public interface Measurable {
+public interface Weightable {
     float getWeight();
 }
