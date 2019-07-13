@@ -1,7 +1,7 @@
 package pl.hf.bazaofert.offer;
 
 import lombok.Data;
-import pl.hf.bazaofert.customer.Customer;
+import pl.hf.bazaofert.entity.Customer;
 import pl.hf.bazaofert.employee.Employee;
 
 import javax.persistence.*;

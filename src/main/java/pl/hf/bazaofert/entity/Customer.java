@@ -1,4 +1,4 @@
-package pl.hf.bazaofert.customer;
+package pl.hf.bazaofert.entity;
 
 import lombok.Data;
 import pl.hf.bazaofert.address.Address;

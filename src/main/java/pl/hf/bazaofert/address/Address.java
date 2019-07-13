@@ -13,4 +13,13 @@ public class Address {
     private String city;
     private Country country;
 
+    public Address(String streetNameAndNo, String postalCode, String city, Country country) {
+        this.streetNameAndNo = streetNameAndNo;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.country = country;
+    }
+
+    public Address() {
+    }
 }
