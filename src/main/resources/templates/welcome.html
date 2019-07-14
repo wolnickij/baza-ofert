@@ -1,10 +1,57 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>HF : strona główna</title>
+</head>
 <body>
-<div>
-    <h1>You are logged as <span th:text="${message}"/></h1>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <header class="card-header">
+                    <h4 class="card-title text-center">HF : Baza ofert - Strona główna</h4>
+                </header>
+                <article class="card-body">
+                    <div class="list-group list-group-flush">
+                        <li class="list-group-item">
+
+                            <div class="row">
+                                <div class="col-10">
+                                    <h6 class="text-left">Zalogowany użytkownik : <span th:text="${userName}"/></h6>
+                                </div>
+                                <div class="col-2">
+                                    <a th:href="@{/logout}" role="button" class="btn btn-outline-primary text-right">Wyloguj się</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div>
+                                <a th:href="@{/customer}" role="button" class="btn btn-primary btn-lg">Dodaj nowego klienta</a>
+                                <a th:href="@{/register}" role="button" class="btn btn-primary btn-lg">Zarejestruj
+                                    się</a>
+                            </div>
+                        </li>
+                    </div>
+                </article> <!-- card-body end .// -->
+            </div> <!-- card.// -->
+        </div> <!-- col.//-->
+    </div> <!-- row.//-->
 </div>
-<div>
-    <h1><a th:href="@{/logout}">Logout</a></h1>
-</div>
+<!--container end.//-->
 </body>
 </html>

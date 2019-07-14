@@ -22,20 +22,25 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
+                <header class="card-header">
+                    <h4 class="card-title text-center">HF : Baza ofert - Logowanie</h4>
+                </header>
                 <article class="card-body">
                     <form th:action="@{/login}" th:object="${loginForm}" method="post">
                         <div class="form-group">
-                            <label>Login</label>
+                            <label>Nazwa użytkownika</label>
                             <input class="form-control" placeholder="" th:field="*{login}">
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <label>Password</label>
+                            <label>Hasło</label>
                             <input class="form-control" type="password" th:field="*{password}">
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"> Login </button>
+                            <button type="submit" class="btn btn-primary btn-block"> Zaloguj </button>
                         </div> <!-- form-group// -->
                     </form>
+                    <div class="border-top card-body text-center">Nie masz jeszcze konta? <a th:href="@{/register}">Zarejestruj się</a>
+                    </div>
                 </article> <!-- card-body end .// -->
             </div> <!-- card.// -->
         </div> <!-- col.//-->

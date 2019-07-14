@@ -11,7 +11,7 @@ public class HomePageController {
     @GetMapping("home")
     public ModelAndView get(Authentication authentication) {
         ModelAndView modelAndView = new ModelAndView("welcome");
-        modelAndView.addObject("message", ((UserDetails) authentication.getPrincipal()).getUsername());
+        modelAndView.addObject("userName", ((UserDetails) authentication.getPrincipal()).getUsername());
         return modelAndView;
     }
 

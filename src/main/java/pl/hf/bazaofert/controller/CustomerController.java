@@ -26,9 +26,4 @@ public class CustomerController {
     }
 
 
-String appName = "Ala ma kota";
-    @GetMapping("/")
-    public ModelAndView homeGet(){
-        return new ModelAndView("aaa", "tekst",appName);
-    }
 }

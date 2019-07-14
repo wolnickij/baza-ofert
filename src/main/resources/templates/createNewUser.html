@@ -24,37 +24,38 @@
         <div class="col-md-6">
             <div class="card">
                 <header class="card-header">
-                    <a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>
-                    <h4 class="card-title mt-2">Sign up</h4>
+                    <h4 class="card-title mt-2 text-center">HF : Baza ofert - Zarejestruj się</h4>
                 </header>
                 <article class="card-body">
                     <form th:action="@{/register}" th:object="${userForm}" method="post">
                         <div class="form-row">
                             <div class="col form-group">
-                                <label>First name </label>
+                                <label>Imię</label>
                                 <input type="text" class="form-control" th:field="*{name}">
+                                <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Imię musi zawierać od 3 do 30 znaków</p>
                             </div> <!-- form-group end.// -->
                             <div class="col form-group">
-                                <label>Last name</label>
+                                <label>Nazwisko</label>
                                 <input type="text" class="form-control" th:field="*{surname}">
+                                <p th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Nazwisko musi zawierać od 3 do 30 znaków</p>
                             </div> <!-- form-group end.// -->
                         </div> <!-- form-row end.// -->
                         <div class="form-group">
-                            <label>Login</label>
+                            <label>Nazwa użytkownika</label>
                             <input class="form-control" placeholder="" th:field="*{login}">
+                            <p th:if="${#fields.hasErrors('login')}" th:errors="*{login}">Nazwa użytkownika musi zawierać od 3 do 30 znaków</p>
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <label>Create password</label>
+                            <label>Hasło</label>
                             <input class="form-control" type="password" th:field="*{password}">
+                            <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Hasło musi zawierać od 3 do 30 znaków</p>
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"> Register</button>
+                            <button type="submit" class="btn btn-primary btn-block">Zarejestuj się</button>
                         </div> <!-- form-group// -->
-                        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br>
-                            Terms of use and Privacy Policy.</small>
                     </form>
                 </article> <!-- card-body end .// -->
-                <div class="border-top card-body text-center">Have an account? <a th:href="@{/login}">Log In</a></div>
+                <div class="border-top card-body text-center">Jesteś już zarejestowany? <a th:href="@{/login}">Zaloguj</a></div>
             </div> <!-- card.// -->
         </div> <!-- col.//-->
 
